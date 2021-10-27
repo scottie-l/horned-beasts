@@ -8,16 +8,16 @@ class Main extends Component {
         this.state = {
             data: data    
         }
-        this.state = {
-            data: data +1
-        }
+        // this.state = {
+        //     data: data +1
+        // }
     }
    
     
     render() {      
         return(
             <div>
-                {this.state.data.map((beast, index) => (
+                {/* {this.state.data.map((beast, index) => ( */}
                     <HornedBeasts 
                         key={index}
                         animalName={beast.title}
