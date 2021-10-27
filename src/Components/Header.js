@@ -1,7 +1,7 @@
 import {Component} from 'react';
 import Container from 'react-bootstrap/Container';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import '/home/scottie_l/projects/code301/lab_01/src/CSS/header.css';
+import '../css/header.css';
 
 
 class Header extends Component {
