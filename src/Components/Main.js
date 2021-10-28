@@ -26,4 +26,9 @@ class Main extends Component {
     }
 }
 
+// import the data.json file into app componenet and send that data inot the main  component
+// function to allow user to update state in the app
+// create 'selectedBeast' component and include in your app
+// use the state in the app to render an indivdual beast in the modal selectedBeast component using react bootstrap
+
 export default Main;
