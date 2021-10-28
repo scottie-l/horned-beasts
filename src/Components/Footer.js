@@ -6,9 +6,7 @@ class Footer extends Component {
     render() {
         return(
             <Container>
-                <>
                 <p>created by: Scott Lease</p>
-                </>
             </Container>
         )
     }

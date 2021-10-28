@@ -13,7 +13,6 @@ class HornedBeasts extends Component {
     handleClick = () => {
         this.setState({
             favs: this.state.favs +1
-            // console.log('clicked')
         });
     }
 
