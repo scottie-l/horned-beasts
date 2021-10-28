@@ -1,38 +1,44 @@
 import React, {Component} from 'react';
 import Header from './Header.js';
-import Main from './Main.js'
+import Main from './Main.js';
 import Footer from './Footer.js';
-import SelectedBeast from './SelectedBeast.js';
 import Container from 'react-bootstrap/Container';
+import SelectedBeast from './SelectedBeast.js';
+import beasts from '../data.json';
 import '../css/app.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import '../data.json';
 
 export default class App extends Component {
   constructor(props) {
     super(props);
-    this.state = {displayBeast: false};
+    this.state = {
+      show: false,
+      featuredBeast: {}
+    }
   }
 
-  showDetails = (beast) => {
-    this.setState({displayBeast: beast});
+  closeModal = () => {
+    this.setState({show: false});
   }
 
-  handleHide = () => {
-    this.setState({displayBeast: false});
+  openModal = () => {
+    this.setState({show: true});
   }
 
+  updateBeast = (beast) => {
+    this.setState({featuredBeast: beast});
+    this.openModal();
+  }
 
-render() {
+  render() {
     return (
       <Container>
         <Header/>
-        <Main beast = {beast} showDetails = {this.showDetails}/>
+        <Main updateBeast = {this.updateBeast} beasts = {beasts}/>
         <Footer/>
-        <selectedBeast beast = {this.state.showBeast} handleHide = {this.handleHide}/>     
+        <SelectedBeast featuredBeast = {this.state.featuredBeast} closeModal = {this.closeModal} show = {this.state.show}/>     
       </Container>
-    )
+    );
   }
 }
 
-// create selectedBeast component
