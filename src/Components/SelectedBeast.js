@@ -1,19 +1,28 @@
-import {Modal} from 'react-bootstrap';
 import {Component} from 'react';
-import {Button, Figure} from 'react-bootstrap';
+import Modal from 'react-bootstrap/Modal';
+import Button from 'react-bootstrap/Button';
 
 class SelectedBeast extends Component {
+
+    handleClose = () => {
+        this.props.closeModal();
+    }
+
     render() {
         return (
-            <Modal show = {this.props.beast} onHide = {this.props.handleHide}>
-                <Modal.Header><h1>{this.props.beast ? this.props.beast.animalName: ''}</h1></Modal.Header>
-                <Modal.body>
-                    <Figure>
-                        <Figure.Image src = {this.props.beast ? this.props.beast.imageURL: ''}></Figure.Image>
-                        <Figure.Caption>{this.props.beast ? this.props.beast.description: ''}</Figure.Caption>                        
-                    </Figure>
-                    <Button variant = 'primary' onClick = {this.props.handleHide}>Close</Button>
-                </Modal.body>
+            <Modal show = {this.props.show} onHide = {this.handleClose}>
+                <Modal.Header closeButton>
+                    <h1>{this.props.featuredBeast.title}</h1>
+                        <description>{this.props.featuredBeast.description}</description>                      
+                </Modal.Header>
+                <Modal.Body>
+                    <div>
+                        <img src = {this.props.featuredBeast.image_url} alt = {this.props.description}/>
+                    </div>
+                </Modal.Body>
+                <Modal.Footer>
+                    <Button variant = 'secondary' onClick = {this.handleClose}>Close</Button>
+                </Modal.Footer>
             </Modal>
         )
     }
