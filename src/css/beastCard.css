@@ -1,7 +1,5 @@
-background {
-    color:black;
-}
-
-beastCard {
+#beastCard {
     border: thin solid black; 
+    background-color: cornflowerblue;
+    color:crimson;
 }
