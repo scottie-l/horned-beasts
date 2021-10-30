@@ -100,3 +100,13 @@ Start time: __5:00pm___
 Finish time: __7:45pm___
 
 Actual time needed to complete: __1.75 hours___
+
+Number and name of feature: Feature #4 Display a Modal
+
+Estimate of time needed to complete: __2 hours___
+
+Start time: _1:30pm____
+
+Finish time: _3:15pm____
+
+Actual time needed to complete: _1.75 hours____
